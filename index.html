@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahima Junior Fall - Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8A2BE2',secondary:'#F8F8FF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
+}
+.skill-bar {
+height: 8px;
+border-radius: 4px;
+background-color: #E9E9FF;
+overflow: hidden;
+}
+.skill-progress {
+height: 100%;
+border-radius: 4px;
+background-color: #8A2BE2;
+transition: width 1s ease-in-out;
+}
+.project-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(138, 43, 226, 0.15);
+}
+.custom-checkbox {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #8A2BE2;
+border-radius: 4px;
+position: relative;
+cursor: pointer;
+outline: none;
+}
+.custom-checkbox:checked {
+background-color: #8A2BE2;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white shadow-sm z-50 py-3">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<a href="#" class="text-primary font-['Pacifico'] text-2xl">IJF</a>
+<div class="hidden md:flex space-x-8">
+<a href="#accueil" class="text-gray-800 hover:text-primary transition-colors">Accueil</a>
+<a href="#apropos" class="text-gray-800 hover:text-primary transition-colors">À propos</a>
+<a href="#projets" class="text-gray-800 hover:text-primary transition-colors">Projets</a>
+<a href="#competences" class="text-gray-800 hover:text-primary transition-colors">Compétences</a>
+<a href="#contact" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu (Hidden by default) -->
+<div class="hidden fixed inset-0 bg-white z-50 pt-20 px-6">
+<div class="flex flex-col space-y-6 text-center">
+<a href="#accueil" class="text-xl text-gray-800 py-2 border-b border-gray-100">Accueil</a>
+<a href="#apropos" class="text-xl text-gray-800 py-2 border-b border-gray-100">À propos</a>
+<a href="#projets" class="text-xl text-gray-800 py-2 border-b border-gray-100">Projets</a>
+<a href="#competences" class="text-xl text-gray-800 py-2 border-b border-gray-100">Compétences</a>
+<a href="#contact" class="text-xl text-gray-800 py-2">Contact</a>
+</div>
+<button class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<!-- Hero Section -->
+<section id="accueil" class="w-full min-h-screen flex items-center relative pt-16" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20abstract%20background%20with%20subtle%20purple%20gradient%20elements%2C%20clean%20design%2C%20white%20space%2C%20geometric%20shapes%2C%20professional%20portfolio%20background%2C%20high-quality%20digital%20art&width=1920&height=1080&seq=hero1&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent"></div>
+<div class="container mx-auto px-6 z-10">
+<div class="flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="w-full md:w-1/2">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">Ibrahima Junior Fall</h1>
+<p class="text-xl md:text-2xl text-gray-700 mb-8">Étudiant Développeur | Passionné de Tech et Création</p>
+<p class="text-gray-600 mb-10 max-w-lg">Bienvenue dans mon univers numérique où je partage ma passion pour le développement et mes projets innovants.</p>
+<a href="#projets" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all shadow-md whitespace-nowrap inline-flex items-center">
+Découvrir mes projets
+<span class="ml-2 w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 flex justify-center">
+<img src="https://static.readdy.ai/image/8fb7220f2d43e5ac53dd76e136a9e679/4b677cfcaa87173742230476be788e73.jpeg" alt="Ibrahima Junior Fall" class="rounded-2xl shadow-xl max-w-md w-full">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="apropos" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16 text-gray-800">À propos de moi</h2>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-2/5 mb-8 md:mb-0">
+<div class="rounded-xl overflow-hidden shadow-lg">
+<img src="https://static.readdy.ai/image/8fb7220f2d43e5ac53dd76e136a9e679/9a329701b7ddb7577dafee96c79d9ed0.jpeg" alt="Ibrahima Junior Fall" class="w-full h-auto object-cover">
+</div>
+</div>
+<div class="w-full md:w-3/5">
+<h3 class="text-2xl font-semibold mb-4 text-gray-800">Qui suis-je?</h3>
+<p class="text-gray-600 mb-4">Je suis un étudiant développeur sénégalais passionné par la technologie et l'innovation. Mon parcours est guidé par ma curiosité insatiable et mon désir de créer des solutions numériques qui ont un impact positif.</p>
+<p class="text-gray-600 mb-6">Actuellement en formation, je me spécialise dans le développement web et l'exploration des technologies émergentes comme l'intelligence artificielle. J'aime particulièrement la narration immersive et la façon dont la technologie peut améliorer notre quotidien.</p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">Développement Web</span>
+<span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">UI/UX Design</span>
+<span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">Intelligence Artificielle</span>
+<span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">Narration Numérique</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projets" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Mes Projets à venir</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="project-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20university%20campus%20app%20interface%2C%20digital%20platform%20for%20students%2C%20clean%20UI%20design%2C%20purple%20and%20white%20color%20scheme%2C%20mobile%20application%20mockup%2C%20high%20quality&width=800&height=400&seq=project1&orientation=landscape" alt="MYCAMPUS" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<h3 class="text-xl font-semibold text-gray-800">MYCAMPUS</h3>
+<span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">En développement</span>
+</div>
+<p class="text-gray-600 mb-4">Une plateforme innovante conçue pour aider les étudiants universitaires à mieux gérer leur vie sur le campus. MYCAMPUS intégrera des fonctionnalités comme la gestion des horaires, la localisation des salles, et la mise en relation avec d'autres étudiants.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">React</span>
+<span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Node.js</span>
+<span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">MongoDB</span>
+</div>
+<a href="Détails-du-Projet-Sélectionné.html" data-readdy="true" class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+Plus de détails
+<span class="ml-2 w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="project-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=futuristic%20AI%20technology%20concept%2C%20abstract%20visualization%20of%20artificial%20intelligence%2C%20purple%20and%20blue%20digital%20interface%2C%20innovative%20tech%20solution%2C%20clean%20modern%20design%2C%20high%20quality&width=800&height=400&seq=project2&orientation=landscape" alt="Projet IA" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<h3 class="text-xl font-semibold text-gray-800">Projet d'innovation en IA</h3>
+<span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Concept</span>
+</div>
+<p class="text-gray-600 mb-4">Un concept ambitieux visant à appliquer l'intelligence artificielle pour résoudre des problèmes concrets au Sénégal. Ce projet explorera comment l'IA peut être utilisée pour améliorer l'agriculture, l'éducation et la santé dans les communautés locales.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Python</span>
+<span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">TensorFlow</span>
+<span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Data Science</span>
+</div>
+<a href="https://readdy.ai/home/1970cbac-f6fc-4abd-a92a-0f28ac1d5618/0a14c5b0-e203-4479-bfe5-c1c9e5abe070" data-readdy="true" class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+Plus de détails
+<span class="ml-2 w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="competences" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Mes Compétences</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Development Skills -->
+<div>
+<h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center mr-2 bg-primary bg-opacity-10 rounded-full">
+<i class="ri-code-s-slash-line text-primary"></i>
+</span>
+Développement
+</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">HTML</span>
+<span class="text-gray-500">50%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 50%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">CSS</span>
+<span class="text-gray-500">45%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 45%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">Python</span>
+<span class="text-gray-500">40%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Other Skills -->
+<div>
+<h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center mr-2 bg-primary bg-opacity-10 rounded-full">
+<i class="ri-terminal-line text-primary"></i>
+</span>
+Autres Compétences
+</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">WordPress</span>
+<span class="text-gray-500">30%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 30%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">Outils IA</span>
+<span class="text-gray-500">30%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 30%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">Storytelling Digital</span>
+<span class="text-gray-500">40%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Me Contacter</h2>
+<div class="flex flex-col md:flex-row gap-12">
+<div class="w-full md:w-1/2">
+<h3 class="text-xl font-semibold mb-4 text-gray-800">Envoyez-moi un message</h3>
+<p class="text-gray-600 mb-6">Vous avez une question ou une proposition de collaboration ? N'hésitez pas à me contacter via ce formulaire ou mes réseaux sociaux.</p>
+<form class="space-y-6" action="" method="POST">
+<div>
+<input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Nom">
+</div>
+<div>
+<input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Email">
+</div>
+<div>
+<textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Message"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all shadow-md whitespace-nowrap">
+Envoyer
+</button>
+</form>
+</div>
+<div class="w-full md:w-1/2">
+<h3 class="text-xl font-semibold mb-4 text-gray-800">Mes coordonnées</h3>
+<p class="text-gray-600 mb-6">Vous pouvez également me contacter directement ou me suivre sur mes réseaux sociaux.</p>
+<div class="space-y-4 mb-8">
+<div class="flex items-center">
+<span class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-mail-line text-primary"></i>
+</span>
+<span class="text-gray-700">ibrahimajuniorfall1@gmail.com</span>
+</div>
+<div class="flex items-center">
+<span class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-phone-line text-primary"></i>
+</span>
+<span class="text-gray-700">77-717-57-13</span>
+</div>
+<div class="flex items-center">
+<span class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-map-pin-line text-primary"></i>
+</span>
+<span class="text-gray-700">Saly, Sénégal</span>
+</div>
+</div>
+<h4 class="font-medium text-gray-800 mb-4">Retrouvez-moi sur</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#0077B5] text-white rounded-full hover:opacity-90 transition-opacity">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#333333] text-white rounded-full hover:opacity-90 transition-opacity">
+<i class="ri-github-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1DA1F2] text-white rounded-full hover:opacity-90 transition-opacity">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#E4405F] text-white rounded-full hover:opacity-90 transition-opacity">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<a href="#" class="text-white font-['Pacifico'] text-2xl">IJF</a>
+<p class="text-gray-400 mt-2">Étudiant Développeur | Passionné de Tech</p>
+</div>
+<div class="flex flex-col items-center md:items-end">
+<p class="text-gray-400 mb-2">© 2025 Ibrahima Junior Fall. Tous droits réservés.</p>
+<p class="text-gray-500 text-sm">Conçu et développé avec passion</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const menuButton = document.querySelector('.md\\:hidden');
+const closeButton = document.querySelector('.absolute.top-6.right-6');
+const mobileMenu = document.querySelector('.hidden.fixed.inset-0');
+const mobileMenuLinks = document.querySelectorAll('.hidden.fixed.inset-0 a');
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('hidden');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Animate skill bars on scroll
+const skillBars = document.querySelectorAll('.skill-progress');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.width = entry.target.parentElement.previousElementSibling.lastElementChild.textContent;
+}
+});
+}, { threshold: 0.5 });
+skillBars.forEach(bar => {
+bar.style.width = '0%';
+observer.observe(bar);
+});
+});
+</script>
+</body>
+</html>
