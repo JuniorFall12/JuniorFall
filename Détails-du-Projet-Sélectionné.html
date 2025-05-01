@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MYCAMPUS - Détails du Projet</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8A2BE2',secondary:'#F8F8FF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #E9E9FF;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8A2BE2;
+  transition: width 1s ease-in-out;
+}
+.timeline-dot::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #8A2BE2;
+  z-index: 1;
+}
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #E9E9FF;
+}
+.carousel-container {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.carousel-slide {
+  scroll-snap-align: start;
+}
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8A2BE2;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+.custom-checkbox:checked {
+  background-color: #8A2BE2;
+}
+.custom-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="fixed top-0 w-full bg-white shadow-sm z-50 py-3">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <div class="flex items-center">
+      <a href="Portfolio-Ibrahima-Junior-Fall.html" data-readdy="true" class="flex items-center text-gray-800 hover:text-primary transition-colors mr-6">
+        <span class="w-8 h-8 flex items-center justify-center">
+          <i class="ri-arrow-left-line ri-lg"></i>
+        </span>
+        <span class="font-medium">Retour</span>
+      </a>
+      <h1 class="text-xl font-bold text-gray-800">MYCAMPUS</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">En développement</span>
+      <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-all shadow-sm whitespace-nowrap">
+        Suivre le projet
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Banner -->
+<section class="pt-24 pb-10 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="rounded-xl overflow-hidden shadow-lg h-80 mb-8">
+      <img src="https://readdy.ai/api/search-image?query=modern%2520university%2520campus%2520app%2520interface%2520with%2520clean%2520UI%2520design%252C%2520showing%2520dashboard%2520with%2520schedule%252C%2520map%2520and%2520social%2520features%252C%2520purple%2520and%2520white%2520color%2520scheme%252C%2520professional%2520mockup%2520on%2520laptop%2520and%2520mobile%2520devices%252C%2520high%2520quality%2520digital%2520render&width=1200&height=500&seq=mycampus_hero&orientation=landscape" alt="MYCAMPUS" class="w-full h-full object-cover object-top">
+    </div>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="w-full md:w-2/3">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">MYCAMPUS</h2>
+        <p class="text-gray-600 mb-6">MYCAMPUS est une plateforme innovante conçue pour révolutionner l'expérience étudiante sur le campus universitaire. Notre objectif est de créer un écosystème numérique complet qui centralise toutes les ressources, services et informations dont les étudiants ont besoin au quotidien, tout en favorisant les interactions sociales et l'engagement communautaire.</p>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">React</span>
+          <span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">Node.js</span>
+          <span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">MongoDB</span>
+          <span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">Express</span>
+          <span class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm">UI/UX Design</span>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 bg-white rounded-xl shadow-sm p-6">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Informations du projet</h3>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <span class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+              <i class="ri-calendar-line text-primary"></i>
+            </span>
+            <div>
+              <p class="text-sm text-gray-500">Date de début</p>
+              <p class="text-gray-700">Janvier 2025</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+              <i class="ri-team-line text-primary"></i>
+            </span>
+            <div>
+              <p class="text-sm text-gray-500">Équipe</p>
+              <p class="text-gray-700">4 développeurs, 2 designers</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+              <i class="ri-rocket-line text-primary"></i>
+            </span>
+            <div>
+              <p class="text-sm text-gray-500">Lancement prévu</p>
+              <p class="text-gray-700">Septembre 2025</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+              <i class="ri-github-line text-primary"></i>
+            </span>
+            <div>
+              <p class="text-sm text-gray-500">Référentiel</p>
+              <a href="#" class="text-primary hover:underline">github.com/ijfall/mycampus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation Tabs -->
+<section class="py-4 bg-white border-b border-gray-200 sticky top-16 z-40">
+  <div class="container mx-auto px-6">
+    <div class="flex overflow-x-auto space-x-6 pb-2">
+      <a href="#objectifs" class="text-primary font-medium border-b-2 border-primary pb-2 whitespace-nowrap">Objectifs</a>
+      <a href="#fonctionnalites" class="text-gray-600 hover:text-primary font-medium pb-2 whitespace-nowrap">Fonctionnalités</a>
+      <a href="#technique" class="text-gray-600 hover:text-primary font-medium pb-2 whitespace-nowrap">Aspect Technique</a>
+      <a href="#maquettes" class="text-gray-600 hover:text-primary font-medium pb-2 whitespace-nowrap">Maquettes</a>
+      <a href="#progression" class="text-gray-600 hover:text-primary font-medium pb-2 whitespace-nowrap">Progression</a>
+      <a href="#commentaires" class="text-gray-600 hover:text-primary font-medium pb-2 whitespace-nowrap">Commentaires</a>
+    </div>
+  </div>
+</section>
+
+<!-- Objectives Section -->
+<section id="objectifs" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-10">Objectifs du projet</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-white rounded-xl shadow-sm p-8">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Vision globale</h3>
+        <p class="text-gray-600 mb-6">MYCAMPUS vise à transformer l'expérience étudiante en créant un hub numérique central qui répond à tous les besoins des étudiants universitaires. Notre plateforme est conçue pour simplifier la vie quotidienne sur le campus, favoriser l'engagement communautaire et améliorer l'accès aux ressources académiques.</p>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <input type="checkbox" checked class="custom-checkbox mt-1 mr-3">
+            <div>
+              <p class="font-medium text-gray-800">Centralisation des ressources</p>
+              <p class="text-gray-600 text-sm">Regrouper toutes les informations et services essentiels en un seul endroit.</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" checked class="custom-checkbox mt-1 mr-3">
+            <div>
+              <p class="font-medium text-gray-800">Amélioration de l'orientation</p>
+              <p class="text-gray-600 text-sm">Faciliter la navigation sur le campus et la localisation des salles.</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="custom-checkbox mt-1 mr-3">
+            <div>
+              <p class="font-medium text-gray-800">Renforcement de la communauté</p>
+              <p class="text-gray-600 text-sm">Créer des espaces virtuels pour les interactions sociales et les collaborations.</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="custom-checkbox mt-1 mr-3">
+            <div>
+              <p class="font-medium text-gray-800">Optimisation du temps</p>
+              <p class="text-gray-600 text-sm">Réduire le temps consacré aux tâches administratives et à la recherche d'informations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm p-8">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Chronologie du projet</h3>
+        <div class="relative pl-10 timeline-line">
+          <div class="mb-8 relative timeline-dot">
+            <h4 class="font-medium text-gray-800">Phase 1: Conception et planification</h4>
+            <p class="text-sm text-gray-500 mb-1">Janvier - Février 2025</p>
+            <p class="text-gray-600 text-sm">Recherche utilisateur, définition des besoins, conception UX/UI, planification technique.</p>
+            <div class="mt-2 flex items-center">
+              <div class="w-24 h-2 bg-primary rounded-full"></div>
+              <span class="ml-2 text-xs text-gray-500">Complété</span>
+            </div>
+          </div>
+          <div class="mb-8 relative timeline-dot">
+            <h4 class="font-medium text-gray-800">Phase 2: Développement frontend</h4>
+            <p class="text-sm text-gray-500 mb-1">Mars - Mai 2025</p>
+            <p class="text-gray-600 text-sm">Développement de l'interface utilisateur, intégration des composants, tests d'utilisabilité.</p>
+            <div class="mt-2 flex items-center">
+              <div class="w-24 h-2 bg-gray-200 rounded-full">
+                <div class="h-full bg-primary rounded-full" style="width: 60%"></div>
+              </div>
+              <span class="ml-2 text-xs text-gray-500">En cours (60%)</span>
+            </div>
+          </div>
+          <div class="mb-8 relative timeline-dot">
+            <h4 class="font-medium text-gray-800">Phase 3: Développement backend</h4>
+            <p class="text-sm text-gray-500 mb-1">Juin - Juillet 2025</p>
+            <p class="text-gray-600 text-sm">Mise en place de l'API, base de données, authentification et sécurité.</p>
+            <div class="mt-2 flex items-center">
+              <div class="w-24 h-2 bg-gray-200 rounded-full">
+                <div class="h-full bg-primary rounded-full" style="width: 20%"></div>
+              </div>
+              <span class="ml-2 text-xs text-gray-500">Démarré (20%)</span>
+            </div>
+          </div>
+          <div class="relative timeline-dot">
+            <h4 class="font-medium text-gray-800">Phase 4: Tests et déploiement</h4>
+            <p class="text-sm text-gray-500 mb-1">Août - Septembre 2025</p>
+            <p class="text-gray-600 text-sm">Tests d'intégration, correction des bugs, déploiement et lancement officiel.</p>
+            <div class="mt-2 flex items-center">
+              <div class="w-24 h-2 bg-gray-200 rounded-full"></div>
+              <span class="ml-2 text-xs text-gray-500">À venir</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="fonctionnalites" class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-10">Fonctionnalités principales</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+          <i class="ri-calendar-check-line text-primary ri-xl"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Gestion d'emploi du temps</h3>
+        <p class="text-gray-600">Visualisation intuitive des horaires de cours, avec notifications de rappel et synchronisation avec les calendriers personnels.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Vue hebdomadaire et mensuelle
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Alertes pour changements de salles
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Intégration avec Google Calendar
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+          <i class="ri-map-pin-line text-primary ri-xl"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Navigation sur le campus</h3>
+        <p class="text-gray-600">Carte interactive du campus avec localisation en temps réel, itinéraires optimisés et informations sur les bâtiments.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Recherche de salles par code
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Estimation du temps de trajet
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Points d'intérêt (cafétérias, bibliothèques)
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+          <i class="ri-team-line text-primary ri-xl"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Réseau social étudiant</h3>
+        <p class="text-gray-600">Espace communautaire permettant aux étudiants de se connecter, partager des ressources et organiser des événements.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Groupes par filière et centres d'intérêt
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Marketplace étudiant
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Système de covoiturage
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+          <i class="ri-book-open-line text-primary ri-xl"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Ressources académiques</h3>
+        <p class="text-gray-600">Accès centralisé aux supports de cours, bibliothèque numérique et outils d'apprentissage collaboratif.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Partage de notes de cours
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Catalogue de la bibliothèque
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Groupes d'étude virtuels
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+          <i class="ri-notification-line text-primary ri-xl"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Système de notifications</h3>
+        <p class="text-gray-600">Alertes personnalisées pour les événements importants, changements d'horaires et échéances académiques.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Rappels de devoirs et examens
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Annonces administratives
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Préférences de notification configurables
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+          <i class="ri-service-line text-primary ri-xl"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Services du campus</h3>
+        <p class="text-gray-600">Accès aux services universitaires comme la restauration, les activités sportives et les démarches administratives.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Menus des restaurants universitaires
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Réservation d'équipements sportifs
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+            <span class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+              <i class="ri-check-line"></i>
+            </span>
+            Formulaires administratifs en ligne
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technical Section -->
+<section id="technique" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-10">Aspect technique</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-white rounded-xl shadow-sm p-8">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Architecture technique</h3>
+        <div class="mb-8">
+          <div id="architecture-chart" class="w-full h-80"></div>
+        </div>
+        <p class="text-gray-600">MYCAMPUS est construit sur une architecture moderne et évolutive, avec une séparation claire entre le frontend et le backend. Cette approche nous permet de développer et de déployer les différentes parties de l'application indépendamment, tout en maintenant une cohérence globale.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm p-8">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Stack technologique</h3>
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-medium text-gray-800 mb-2">Frontend</h4>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                  <i class="ri-reactjs-line text-blue-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">React</p>
+                  <p class="text-xs text-gray-500">UI Library</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-purple-100 rounded-full mr-3">
+                  <i class="ri-router-line text-purple-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">React Router</p>
+                  <p class="text-xs text-gray-500">Navigation</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-teal-100 rounded-full mr-3">
+                  <i class="ri-css3-line text-teal-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">Tailwind CSS</p>
+                  <p class="text-xs text-gray-500">Styling</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-red-100 rounded-full mr-3">
+                  <i class="ri-map-2-line text-red-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">Leaflet</p>
+                  <p class="text-xs text-gray-500">Maps</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-800 mb-2">Backend</h4>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-green-100 rounded-full mr-3">
+                  <i class="ri-nodejs-line text-green-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">Node.js</p>
+                  <p class="text-xs text-gray-500">Runtime</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full mr-3">
+                  <i class="ri-server-line text-gray-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">Express</p>
+                  <p class="text-xs text-gray-500">API Framework</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-green-100 rounded-full mr-3">
+                  <i class="ri-database-2-line text-green-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">MongoDB</p>
+                  <p class="text-xs text-gray-500">Database</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-red-100 rounded-full mr-3">
+                  <i class="ri-shield-check-line text-red-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">JWT</p>
+                  <p class="text-xs text-gray-500">Authentication</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-800 mb-2">DevOps & Outils</h4>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                  <i class="ri-github-fill text-blue-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">GitHub</p>
+                  <p class="text-xs text-gray-500">Version Control</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                <span class="w-8 h-8 flex items-center justify-center bg-purple-100 rounded-full mr-3">
+                  <i class="ri-cloud-line text-purple-600"></i>
+                </span>
+                <div>
+                  <p class="font-medium text-gray-800">AWS</p>
+                  <p class="text-xs text-gray-500">Hosting</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 bg-white rounded-xl shadow-sm p-8">
+      <h3 class="text-xl font-semibold text-gray-800 mb-6">Défis techniques et solutions</h3>
+      <div class="space-y-6">
+        <div class="flex">
+          <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-red-100 rounded-full mr-4">
+            <i class="ri-error-warning-line text-red-600 ri-lg"></i>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-800 mb-1">Localisation en intérieur</h4>
+            <p class="text-gray-600 mb-2">Le GPS traditionnel ne fonctionne pas efficacement à l'intérieur des bâtiments, ce qui complique la navigation précise dans les campus.</p>
+            <p class="text-gray-600 font-medium">Solution: <span class="font-normal">Utilisation d'un système hybride combinant points d'accès WiFi, beacons Bluetooth et reconnaissance d'images pour déterminer la position de l'utilisateur à l'intérieur des bâtiments.</span></p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-yellow-100 rounded-full mr-4">
+            <i class="ri-error-warning-line text-yellow-600 ri-lg"></i>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-800 mb-1">Synchronisation des données</h4>
+            <p class="text-gray-600 mb-2">Maintenir les emplois du temps et les informations à jour entre les systèmes universitaires existants et notre application.</p>
+            <p class="text-gray-600 font-medium">Solution: <span class="font-normal">Développement d'une API d'intégration avec le système d'information de l'université et mise en place d'un système de mise à jour en temps réel utilisant WebSockets.</span></p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+            <i class="ri-error-warning-line text-blue-600 ri-lg"></i>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-800 mb-1">Performance offline</h4>
+            <p class="text-gray-600 mb-2">Garantir que l'application reste fonctionnelle même lorsque la connexion internet est limitée ou inexistante dans certaines zones du campus.</p>
+            <p class="text-gray-600 font-medium">Solution: <span class="font-normal">Implémentation d'une Progressive Web App (PWA) avec mise en cache intelligente des données fréquemment utilisées et synchronisation en arrière-plan lorsque la connexion est rétablie.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mockups Section -->
+<section id="maquettes" class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-10">Maquettes & Captures d'écran</h2>
+    
+    <div class="relative mb-10">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-semibold text-gray-800">Interface principale</h3>
+        <div class="flex space-x-2">
+          <button id="prev-slide" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+            <i class="ri-arrow-left-s-line text-gray-600"></i>
+          </button>
+          <button id="next-slide" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+            <i class="ri-arrow-right-s-line text-gray-600"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden">
+        <div id="carousel" class="flex carousel-container overflow-x-auto hide-scrollbar">
+          <div class="carousel-slide min-w-full flex-shrink-0">
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+              <img src="https://readdy.ai/api/search-image?query=modern%2520university%2520app%2520dashboard%2520interface%2520with%2520clean%2520UI%2520design%252C%2520showing%2520schedule%252C%2520notifications%252C%2520and%2520campus%2520map%252C%2520purple%2520and%2520white%2520color%2520scheme%252C%2520displayed%2520on%2520smartphone%2520mockup%252C%2520high%2520quality%2520digital%2520render&width=1200&height=800&seq=mockup1&orientation=landscape" alt="Dashboard MYCAMPUS" class="w-full h-auto">
+              <div class="p-4">
+                <h4 class="font-medium text-gray-800">Dashboard principal</h4>
+                <p class="text-gray-600 text-sm">Vue d'ensemble avec accès rapide aux fonctionnalités principales et notifications.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide min-w-full flex-shrink-0">
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+              <img src="https://readdy.ai/api/search-image?query=university%2520campus%2520map%2520mobile%2520interface%2520with%2520building%2520locations%252C%2520navigation%2520paths%252C%2520and%2520search%2520functionality%252C%2520purple%2520accent%2520color%252C%2520clean%2520modern%2520design%252C%2520smartphone%2520mockup%252C%2520high%2520quality%2520digital%2520render&width=1200&height=800&seq=mockup2&orientation=landscape" alt="Navigation Campus MYCAMPUS" class="w-full h-auto">
+              <div class="p-4">
+                <h4 class="font-medium text-gray-800">Navigation sur le campus</h4>
+                <p class="text-gray-600 text-sm">Carte interactive avec localisation en temps réel et recherche de salles.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide min-w-full flex-shrink-0">
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+              <img src="https://readdy.ai/api/search-image?query=student%2520schedule%2520calendar%2520interface%2520with%2520weekly%2520view%252C%2520course%2520details%252C%2520room%2520information%252C%2520and%2520notification%2520settings%252C%2520purple%2520accent%2520color%252C%2520clean%2520modern%2520design%252C%2520smartphone%2520mockup%252C%2520high%2520quality%2520digital%2520render&width=1200&height=800&seq=mockup3&orientation=landscape" alt="Emploi du temps MYCAMPUS" class="w-full h-auto">
+              <div class="p-4">
+                <h4 class="font-medium text-gray-800">Gestion d'emploi du temps</h4>
+                <p class="text-gray-600 text-sm">Vue hebdomadaire des cours avec détails et notifications configurables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="https://readdy.ai/api/search-image?query=university%2520social%2520network%2520feed%2520interface%2520with%2520student%2520posts%252C%2520events%252C%2520and%2520group%2520discussions%252C%2520purple%2520accent%2520color%252C%2520clean%2520modern%2520design%252C%2520smartphone%2520mockup%252C%2520high%2520quality%2520digital%2520render&width=600&height=400&seq=mockup4&orientation=landscape" alt="Réseau social MYCAMPUS" class="w-full h-48 object-cover object-top">
+        <div class="p-4">
+          <h4 class="font-medium text-gray-800">Réseau social étudiant</h4>
+          <p class="text-gray-600 text-sm">Espace d'échange et de partage entre étudiants.</p>
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="https://readdy.ai/api/search-image?query=digital%2520library%2520interface%2520for%2520university%2520students%2520with%2520course%2520materials%252C%2520search%2520functionality%252C%2520and%2520document%2520viewer%252C%2520purple%2520accent%2520color%252C%2520clean%2520modern%2520design%252C%2520smartphone%2520mockup%252C%2520high%2520quality%2520digital%2520render&width=600&height=400&seq=mockup5&orientation=landscape" alt="Ressources académiques MYCAMPUS" class="w-full h-48 object-cover object-top">
+        <div class="p-4">
+          <h4 class="font-medium text-gray-800">Ressources académiques</h4>
+          <p class="text-gray-600 text-sm">Accès aux supports de cours et à la bibliothèque numérique.</p>
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="https://readdy.ai/api/search-image?query=campus%2520services%2520interface%2520showing%2520cafeteria%2520menus%252C%2520sports%2520facilities%2520booking%252C%2520and%2520administrative%2520forms%252C%2520purple%2520accent%2520color%252C%2520clean%2520modern%2520design%252C%2520smartphone%2520mockup%252C%2520high%2520quality%2520digital%2520render&width=600&height=400&seq=mockup6&orientation=landscape" alt="Services du campus MYCAMPUS" class="w-full h-48 object-cover object-top">
+        <div class="p-4">
+          <h4 class="font-medium text-gray-800">Services du campus</h4>
+          <p class="text-gray-600 text-sm">Restauration, activités sportives et démarches administratives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Progress Section -->
+<section id="progression" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-10">État d'avancement</h2>
+    
+    <div class="bg-white rounded-xl shadow-sm p-8 mb-10">
+      <h3 class="text-xl font-semibold text-gray-800 mb-6">Progression globale</h3>
+      <div class="mb-4 flex items-center">
+        <div class="w-full h-4 bg-gray-100 rounded-full mr-4">
+          <div class="h-full bg-primary rounded-full" style="width: 45%"></div>
+        </div>
+        <span class="text-lg font-medium text-gray-800 whitespace-nowrap">45%</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <h4 class="font-medium text-gray-800 mb-2">Conception</h4>
+          <div class="w-16 h-16 mx-auto mb-2 rounded-full flex items-center justify-center bg-green-100">
+            <i class="ri-check-line text-green-600 ri-2x"></i>
+          </div>
+          <p class="text-sm text-gray-600">100% terminé</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <h4 class="font-medium text-gray-800 mb-2">Frontend</h4>
+          <div class="w-16 h-16 mx-auto mb-2 rounded-full flex items-center justify-center bg-primary bg-opacity-20">
+            <span class="text-primary font-bold">60%</span>
+          </div>
+          <p class="text-sm text-gray-600">En développement</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <h4 class="font-medium text-gray-800 mb-2">Backend</h4>
+          <div class="w-16 h-16 mx-auto mb-2 rounded-full flex items-center justify-center bg-primary bg-opacity-20">
+            <span class="text-primary font-bold">20%</span>
+          </div>
+          <p class="text-sm text-gray-600">En développement</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <h4 class="font-medium text-gray-800 mb-2">Tests</h4>
+          <div class="w-16 h-16 mx-auto mb-2 rounded-full flex items-center justify-center bg-gray-200">
+            <span class="text-gray-500 font-bold">0%</span>
+          </div>
+          <p class="text-sm text-gray-600">À venir</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-sm p-8">
+      <h3 class="text-xl font-semibold text-gray-800 mb-6">Jalons du projet</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Jalon</th>
+              <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Date prévue</th>
+              <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Statut</th>
+              <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Responsable</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Analyse des besoins</td>
+              <td class="py-3 px-4 text-sm text-gray-600">15 janvier 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Terminé</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Ibrahima J. Fall</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Conception UX/UI</td>
+              <td class="py-3 px-4 text-sm text-gray-600">28 février 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Terminé</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Marie Diop</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Prototype interactif</td>
+              <td class="py-3 px-4 text-sm text-gray-600">15 mars 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Terminé</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Marie Diop</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Développement frontend (Phase 1)</td>
+              <td class="py-3 px-4 text-sm text-gray-600">30 avril 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">En cours</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Amadou Sow</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Développement frontend (Phase 2)</td>
+              <td class="py-3 px-4 text-sm text-gray-600">31 mai 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Planifié</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Amadou Sow</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Développement backend (API)</td>
+              <td class="py-3 px-4 text-sm text-gray-600">30 juin 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">En cours</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Fatou Ndiaye</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Intégration système universitaire</td>
+              <td class="py-3 px-4 text-sm text-gray-600">31 juillet 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Planifié</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Fatou Ndiaye</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Tests utilisateurs</td>
+              <td class="py-3 px-4 text-sm text-gray-600">15 août 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Planifié</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Ibrahima J. Fall</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm text-gray-800">Lancement version beta</td>
+              <td class="py-3 px-4 text-sm text-gray-600">1 septembre 2025</td>
+              <td class="py-3 px-4">
+                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Planifié</span>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-600">Équipe complète</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comments Section -->
+<section id="commentaires" class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-10">Commentaires et suggestions</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="md:col-span-2">
+        <div class="bg-gray-50 rounded-xl p-6 mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Commentaires récents</h3>
+          
+          <div class="space-y-6">
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+              <div class="flex items-start mb-3">
+                <div class="w-10 h-10 flex-shrink-0 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                  <span class="font-medium">SD</span>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-800">Sophie Diouf</p>
+                  <p class="text-xs text-gray-500">Il y a 3 jours</p>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-3">J'adore le concept de cette application ! En tant qu'étudiante, je perds souvent beaucoup de temps à chercher des salles ou à me tenir informée des changements d'emploi du temps. Est-ce que vous prévoyez d'ajouter une fonctionnalité pour signaler les problèmes dans les salles (projecteur en panne, etc.) ?</p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <span class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-thumb-up-line"></i>
+                  </span>
+                  <span>12</span>
+                </div>
+                <button class="text-primary text-sm font-medium">Répondre</button>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+              <div class="flex items-start mb-3">
+                <div class="w-10 h-10 flex-shrink-0 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3">
+                  <span class="font-medium">MT</span>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-800">Moussa Touré</p>
+                  <p class="text-xs text-gray-500">Il y a 5 jours</p>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-3">Je suis responsable de l'association des étudiants en informatique. Serait-il possible d'intégrer un espace dédié aux associations étudiantes pour qu'elles puissent communiquer directement avec leurs membres via l'application ?</p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <span class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-thumb-up-line"></i>
+                  </span>
+                  <span>8</span>
+                </div>
+                <button class="text-primary text-sm font-medium">Répondre</button>
+              </div>
+              
+              <div class="mt-4 ml-8 bg-gray-50 rounded-lg p-3">
+                <div class="flex items-start mb-2">
+                  <div class="w-8 h-8 flex-shrink-0 bg-primary text-white rounded-full flex items-center justify-center mr-2">
+                    <span class="font-medium text-xs">IJF</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Ibrahima J. Fall</p>
+                    <p class="text-xs text-gray-500">Il y a 4 jours</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm">Excellente suggestion Moussa ! Nous avons justement prévu un module pour les associations dans la phase 2 du développement. Je te contacterai pour recueillir tes besoins spécifiques.</p>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+              <div class="flex items-start mb-3">
+                <div class="w-10 h-10 flex-shrink-0 bg-green-500 text-white rounded-full flex items-center justify-center mr-3">
+                  <span class="font-medium">AN</span>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-800">Aïssatou Ndiaye</p>
+                  <p class="text-xs text-gray-500">Il y a 1 semaine</p>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-3">Avez-vous pensé à intégrer un système de notification pour les offres de stage et d'emploi spécifiques à chaque filière ? Ce serait vraiment utile pour les étudiants en fin de cycle.</p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <span class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-thumb-up-line"></i>
+                  </span>
+                  <span>15</span>
+                </div>
+                <button class="text-primary text-sm font-medium">Répondre</button>
+              </div>
+            </div>
+          </div>
+          
+          <button class="mt-6 w-full py-2 bg-white text-primary font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors">
+            Voir plus de commentaires
+          </button>
+        </div>
+      </div>
+      
+      <div>
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Ajouter un commentaire</h3>
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+              <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-gray-50 border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Votre nom">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-gray-50 border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Votre email">
+            </div>
+            <div>
+              <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">Commentaire</label>
+              <textarea id="comment" rows="4" class="w-full px-4 py-2 rounded-lg bg-gray-50 border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Partagez vos idées ou suggestions..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition-all shadow-sm whitespace-nowrap">
+              Soumettre
+            </button>
+          </form>
+        </div>
+        
+        <div class="mt-8 bg-gray-50 rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Partagez ce projet</h3>
+          <div class="flex space-x-3">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1877F2] text-white rounded-full hover:opacity-90 transition-opacity">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1DA1F2] text-white rounded-full hover:opacity-90 transition-opacity">
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#0A66C2] text-white rounded-full hover:opacity-90 transition-opacity">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#25D366] text-white rounded-full hover:opacity-90 transition-opacity">
+              <i class="ri-whatsapp-fill"></i>
+            </a>
+            <button class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
+              <i class="ri-link"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-primary bg-opacity-5">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Intéressé par ce projet ?</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-8">Suivez l'évolution de MYCAMPUS et soyez parmi les premiers à tester la version beta en septembre 2025.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="https://readdy.ai/home/1970cbac-f6fc-4abd-a92a-0f28ac1d5618/527a6921-ec03-4453-9c6c-b48e62cd35ae" data-readdy="true" class="bg-white text-gray-800 border border-gray-300 px-8 py-3 rounded-button font-medium hover:bg-gray-50 transition-all shadow-sm whitespace-nowrap inline-flex items-center justify-center">
+        <span class="mr-2 w-5 h-5 flex items-center justify-center">
+          <i class="ri-arrow-left-line"></i>
+        </span>
+        Retour au portfolio
+      </a>
+      <button class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all shadow-md whitespace-nowrap inline-flex items-center justify-center">
+        S'inscrire aux mises à jour
+        <span class="ml-2 w-5 h-5 flex items-center justify-center">
+          <i class="ri-notification-line"></i>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-6 md:mb-0">
+        <a href="#" class="text-white font-['Pacifico'] text-2xl">IJF</a>
+        <p class="text-gray-400 mt-2">Étudiant Développeur | Passionné de Tech</p>
+      </div>
+      <div class="flex flex-col items-center md:items-end">
+        <p class="text-gray-400 mb-2">© 2025 Ibrahima Junior Fall. Tous droits réservés.</p>
+        <p class="text-gray-500 text-sm">Conçu et développé avec passion</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Architecture chart
+  const architectureChart = echarts.init(document.getElementById('architecture-chart'));
+  const architectureOption = {
+    animation: false,
+    tooltip: {
+      trigger: 'item',
+      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+      borderColor: '#eee',
+      borderWidth: 1,
+      textStyle: {
+        color: '#1f2937'
+      }
+    },
+    series: [
+      {
+        type: 'sankey',
+        layout: 'none',
+        emphasis: {
+          focus: 'adjacency'
+        },
+        data: [
+          { name: 'Frontend (React)' },
+          { name: 'API Gateway' },
+          { name: 'Services Backend' },
+          { name: 'Base de données' },
+          { name: 'Système Universitaire' },
+          { name: 'Services Tiers' }
+        ],
+        links: [
+          { source: 'Frontend (React)', target: 'API Gateway', value: 5 },
+          { source: 'API Gateway', target: 'Services Backend', value: 3 },
+          { source: 'Services Backend', target: 'Base de données', value: 2 },
+          { source: 'Services Backend', target: 'Système Universitaire', value: 1 },
+          { source: 'Services Backend', target: 'Services Tiers', value: 1 }
+        ],
+        lineStyle: {
+          color: 'rgba(87, 181, 231, 0.5)',
+          curveness: 0.5
+        },
+        itemStyle: {
+          color: function(params) {
+            const colors = [
+              'rgba(87, 181, 231, 1)',
+              'rgba(141, 211, 199, 1)',
+              'rgba(251, 191, 114, 1)',
+              'rgba(252, 141, 98, 1)'
+            ];
+            return colors[params.dataIndex % colors.length];
+          }
+        }
+      }
+    ]
+  };
+  architectureChart.setOption(architectureOption);
+  
+  // Carousel functionality
+  const carousel = document.getElementById('carousel');
+  const prevButton = document.getElementById('prev-slide');
+  const nextButton = document.getElementById('next-slide');
+  let currentSlide = 0;
+  const totalSlides = document.querySelectorAll('.carousel-slide').length;
+  
+  function goToSlide(slideIndex) {
+    if (slideIndex < 0) slideIndex = totalSlides - 1;
+    if (slideIndex >= totalSlides) slideIndex = 0;
+    
+    currentSlide = slideIndex;
+    carousel.scrollTo({
+      left: carousel.clientWidth * currentSlide,
+      behavior: 'smooth'
+    });
+  }
+  
+  prevButton.addEventListener('click', () => {
+    goToSlide(currentSlide - 1);
+  });
+  
+  nextButton.addEventListener('click', () => {
+    goToSlide(currentSlide + 1);
+  });
+  
+  // Resize handler for charts
+  window.addEventListener('resize', function() {
+    architectureChart.resize();
+  });
+});
+</script>
+</body>
+</html>
